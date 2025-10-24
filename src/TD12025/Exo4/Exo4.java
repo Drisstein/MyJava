@@ -6,6 +6,18 @@ package TD12025.Exo4;
 // Créez une classe Panier qui permet d’ajouter des produits et de calculer le total. Si un utilisateur tente
 // d’ajouter une quantité supérieure à la quantité en stock, le programme lève une QuantiteIndisponibleException
 
-public class Exo4 {
+class QuantiteIndisponibleException extends Exception {
+    public QuantiteIndisponibleException(String message) {
+        super(message);
+    }
+}
 
+public class Exo4 {
+    public static void main(String[] args) throws QuantiteIndisponibleException {
+        Produit produit1 = new Produit("Laptop", 999.99, 5);
+        Panier panier = new Panier();
+        panier.ajouterProduit(produit1, 3); // Ajout valide
+        System.out.println("Total du panier: " + panier.calculerTotal());
+
+    }
 }

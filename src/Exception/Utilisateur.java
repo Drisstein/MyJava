@@ -51,11 +51,10 @@ public class Utilisateur {
     public static void login(String username, String mdp) {
         try {
             checkPassword(mdp);
-
             Utilisateur user1 = new Utilisateur(username, mdp);
             System.out.println("Bienvenue, " + user1.getUsername());
         } catch (Exception e) {
-           System.err.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
 
     }

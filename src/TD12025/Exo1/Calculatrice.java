@@ -47,7 +47,7 @@ public class Calculatrice {
                 switch (op) {
                     case "+":
                         result = a + b;
-                        System.out.println(a + "+" + "b" + "=" + (a + b));
+                        System.out.println(a + "+" + b + "=" + (a + b));
                         break;
                     case "-":
                         result = a - b;
