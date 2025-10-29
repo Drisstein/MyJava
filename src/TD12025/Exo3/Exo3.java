@@ -11,9 +11,24 @@ package TD12025.Exo3;
 
 public class Exo3 {
     public static void main(String[] args) {
-        
+        String password = ""; // Exemple de mot de passe à valider
+        java.util.Scanner sc = new java.util.Scanner(System.in);
+
+        while (true) {
+            PasswordValidation PasswordCheck = new PasswordValidation(password);
+            try {
+                System.out.print("Entrer le mot de passe à valider : ");
+                password = sc.nextLine();
+                PasswordCheck.validation(password);
+                System.out.println("Mot de passe valide.");
+                break;
+            } catch (MotDePasseTropCourtException | MotDePasseSansChiffreException | MotDePasseSansMajusculeException
+                    | MotDePasseSansMinusculeException e) {
+                System.out.println("Erreur de validation du mot de passe : " + e.getMessage());
+            }
+
+        }
+
     }
-
-
 
 }

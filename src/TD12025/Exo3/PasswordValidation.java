@@ -37,7 +37,7 @@ public class PasswordValidation {
         this.password = password;
     }
     
-    public void validation() throws MotDePasseTropCourtException, MotDePasseSansChiffreException,
+    public void validation(String password) throws MotDePasseTropCourtException, MotDePasseSansChiffreException,
             MotDePasseSansMajusculeException, MotDePasseSansMinusculeException {
         if (password.length() < 8) {
             throw new MotDePasseTropCourtException("Le mot de passe doit contenir au moins 8 caractères.");
@@ -52,4 +52,4 @@ public class PasswordValidation {
             throw new MotDePasseSansMinusculeException("Le mot de passe doit contenir au moins une lettre minuscule.");
         }
     }
-}
+}   
