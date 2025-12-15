@@ -1,0 +1,3 @@
+Bonjour à toutes et à tous, ici le texte pour l'EXO1 du TP sur les Strings Input Output.
+Ceci est là deuxieme ligne du TP.
+Ceci est là la troisieme ligne du TP.
